@@ -1,0 +1,9 @@
+<ul class="nav flex-column p-2 d-flex gap-2">
+    {{ range .categories }}
+    <li class="nav-item">
+        <a class="nav-link text-bg-secondary fs-2 rounded-1" href="{{.Href}}">
+            {{.Name}}
+        </a>
+    </li>
+    {{ end }}
+</ul>

@@ -1,0 +1,25 @@
+{{set . "title" "Auth"}}
+{{template "header.html" .}}
+
+<div class="container">
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                    <h1 class="text-lg-center mb-4 fs-1">Register</h1>
+                    <form class="d-flex flex-column col-md-10" hx-post="/auth/register" hx-target="this" hx-swap="innerHTML">
+                        {{ template "Auth/RegisterForm.html" .}}
+                    </form>
+                    <div class="d-flex justify-content-center">
+                        <p class="fs-3 mt-4">
+                            Already have an account? <a href="/auth" class="text-light">Login here</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{{template "footer.html" .}}
